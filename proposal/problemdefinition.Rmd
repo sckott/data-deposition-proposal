@@ -1,0 +1,26 @@
+# The Problem
+<!-- 
+Outlining the issue / weak point / problem to be solved by this proposal. This should be a compelling section that sets the reader up for the next section - the proposed solution!
+
+It is important to cover:
+
+ - [ ] What the problem is
+ - [ ] Who it affects
+ - [ ] Have there been previous attempts to resolve the problem
+ - [ ] Why it should be tackled
+-->
+
+Publicly depositing datasets associated with published research is becoming more common. This is in part due to an increase in journals requiring data sharing, though the proportion of journals requiring sharing is still quite small (Resnik et al. 2019). In addition, there is ongoing cultural change happening in academia in which data sharing is becoming more of an accepted gold standard. However, some journal policies do not enforce their own data sharing policies, and authors often do not comply (Vines et al. 2014, Stodden et al. 2018, Christensen et al. 2019). 
+
+One reason authors do not share data is because of the time involved. Fecher et al. (2015) found in a survey that respondents often said data sharing was too much effort and took too much time. One of the major pieces of sharing data is the preparation of data and metadata into a format that a data repository expects. Better programmatic tools can transform data sharing from a mountainous climb into a pit of success. Documentation and training can help get users familiar with the process, but a browser based data and metadata submission workflow can only be so fast, is not easily reproduced, and does not facilitate updates as data and metadata are updated due to revisions/corrections.
+
+Why make a programmatic tool in R?  R is widespread in academia in many disciplines. Thus, the potential user base of tools to make data deposition easier is likely quite large.
+
+In addition to the large number of R users in research, the number of datasets uploaded to data repositories is enormous. The [Registry of Research Data Repositories](https://www.re3data.org/) provides the number of datasets in each repository. For example, [Dryad](https://datadryad.org/) has 30,000 datasets; [Knowledge Network for Biocomplexity](https://knb.ecoinformatics.org/) has 27,000 datasets; and [Pangaea](https://www.pangaea.de/) has 400,000 datasets. Only a fraction of the people uploading datasets would consider using R to upload datasets, but together with a large number of R users, and increased prevalence of open science practices, there is likely significant demand for a high quality R software tool for data deposition.
+
+There are some existing solutions for data deposition in R:
+- [dataone](https://cloud.r-project.org/web/packages/dataone/): DataOne ([Data Observation Network for Earth](https://www.dataone.org/)) is a very general data repository. This package does support uploading datasets to the [DataOne cloud](https://cran.r-project.org/web/packages/dataone/vignettes/v05-upload-data.html) 
+- [rdryad](https://cloud.r-project.org/web/packages/rdryad/): Like DataOne, [Dryad](https://datadryad.org/stash) is a general data repository. Karthik Ram and I maintain this package. Data submission to Dryad is in development in this package.
+- [osfr](https://cloud.r-project.org/web/packages/osfr): Open Science Framework ([OSF](https://osf.io/)) is a project management platform that includes hosting research datasets. osfr is an rOpenSci package maintained by a community member.
+
+The above tools are built to interact with single data repositories. I know of no tools that work across data repositories.
