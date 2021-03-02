@@ -19,13 +19,13 @@ Depending on project type the detail section should include:
  - [ ] Assumptions
 -->
 
-I propose a framework in which we provide a single user interface to many different research data repositories. My approach is like that of dplyr; whereas dplyr “verbs” work identically across many backends (e.g., spreadsheet, SQL database), this project will simplify data deposition under a common set of commands. This model of decoupling the interface from the backend has proven successful, but has not yet been applied to the important task of researchers sharing data.
+I propose a framework that is a single user interface to many different research data repositories. My approach is like that of dplyr; whereas dplyr “verbs” work identically across many backends (e.g., spreadsheet, SQL database), this project will simplify data deposition under a common set of commands. This model of decoupling the interface from the backend has proven successful, but has not yet been applied to the important task of researchers sharing data.
 
 There are thousands of different data repositories, with many aspects that differ among them (e.g., disciplinary scope, openness, data submission format, authentication methods). While only a handful of repositories may be relevant to any individual researcher, the fact that each one likely implements totally different interfaces and protocols for depositing/updating data creates significant barriers for end users. We aim to simplify all of that complexity to make depositing data much easier. 
 
 As there are so many data research repositories, it would not be feasible for a few developers to maintain extensions for so many different sources and verify they work. Instead, I will design a package that implements a modular/plugin system so that users can contribute their own plugins to extend functionality to other repositories. Detailed vignettes will be written to document this process.
 
-One of the first steps will be to complete research on data repositories using the Registry of Research Data Repositories (https://www.re3data.org/).  This will allow us to quickly get familiar with the diversity of technical details behind data repositories. I will narrow the set down to two repositories that are widely used so we can provide the largest immediate payoff upon project completion. In addition, the focus on two widely used repositories will make the complexity manageable while still providing enough variety so that we’ll cover a large number of users.
+One of the first steps will be to complete research on data repositories using the [Registry of Research Data Repositories](https://www.re3data.org/).  This will allow us to quickly get familiar with the diversity of technical details behind data repositories. I will narrow the set down to two repositories that are widely used so we can provide the largest immediate payoff upon project completion. In addition, the focus on two widely used repositories will make the complexity manageable while still providing enough variety so that we’ll cover a large number of users.
 
 My significant experience in working with web services will help make interactions with data repositories as smooth as possible. I created and maintain packages for major aspects of working with web services in R: crul, an HTTP client (similar to httr); webmockr, for mocking HTTP requests; and vcr, for caching HTTP requests in unit tests.
 
@@ -67,19 +67,22 @@ deposits::browse(x$id)
 ```
 
 I anticipate using the following packages to support the proposed components:
+
 - Authentication: httr, crul
 - Prepare data: vroom, data.table
 - Prepare metadata: various, including: xml2, jsonlite, rdflib
 - Submit in R / Fetch data / Browse data: httr, crul
 
-<!-- img -->
+<!-- <img src="assets/img.png" width="300"> -->
+
+![Fig 1. (Icons from [FontAwesome](https://fontawesome.com/))](assets/img.png){#id .class width=375}
 
 It may make sense after some work is done to break off parts of the package into additional package(s). The R package devtools has shown us that placing too many disparate tasks in a single package can be better accomplished by separating them. 
 
 
-### Project plan
+## Project plan
 
-#### Start-up phase
+### Start-up phase
 
 We’ll start with research on data repositories. This will entail using the Registry of Research Data Repositories, including communication with repository managers to clarify any details which are not clear or not documented. In addition, we’ll identify users of each repository to help us test the package. Details on data repository research:
 
@@ -88,7 +91,7 @@ We’ll start with research on data repositories. This will entail using the Reg
 - Find data repositories that do not support programmatic data upload - for these we can help users prepare data for browser based submission
 - Does each data repository use any standard or vocabulary we can use to help prepare/validate data for users?
 
-#### Technical delivery
+### Technical delivery
 
 - Design plugin system to allow for anyone to extend the package for any additional data repositories
 - Design public API (user facing functions) with function names that convey meaning following the usethis package model.
@@ -101,7 +104,6 @@ We’ll start with research on data repositories. This will entail using the Reg
 - Implement data upload methods
 - Documentation: write detailed documentation, including many vignettes, on a pkgdown site
 - User testing: we’ll test the package ourselves throughout the development process; this step is to get users to test the package to smooth out any user interface problems
-
 
 ### Dissemination
 

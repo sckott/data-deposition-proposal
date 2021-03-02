@@ -8,25 +8,25 @@ Projects should have a definition of done that is measurable, and a thorough und
 What does success look like? 
 -->
 
-This project will be complete when a stable version of mutant is on CRAN and users are starting to give feedback - at that point it will be on its way to wider adoption.
+This project will be complete when a stable version of deposit is on CRAN and users are starting to give feedback - at that point it will be on its way to wider adoption.
 
 ## Measuring success
 <!-- 
 How will we know when success is achieved, what markers can we use along the way 
 -->
 
-Success will be measured by interest gauged via GitHub (stars, forks, opened issues), downloads from CRAN, as well as searching usage in GitHub repositories. Most importantly, I’d like to attract one or more additional maintainers to make sure the project is more sustainable moving forward - and because complex projects are easier with more maintainers.
+Success will be measured by interest gauged via GitHub (stars, forks, opened issues), and downloads from CRAN. Most importantly for the long-term success of the software, I’d like to attract one or more additional maintainers to make sure the project is more sustainable moving forward - and because complex projects are easier with more maintainers. There are many technical university librarians that have been involved in bug reports and writing tutorials for software I maintain for academic metadata sources. Thus, it’s likely these same people will be interested in the proposed software herein and perhaps aid in maintenance. 
+
+We can also measure success by what users do with the software. It is hard to measure how R users use R packages because there’s no way to track usage. However, we will include user agent strings uniquely identifying HTTP requests from our software; then we can ask data repositories to tell us how many requests they get from our user agent string. Citations will not likely work since it’s not likely that users would cite this kind of software in a paper. It is likely that this software could show up in training materials created by librarians at universities.
 
 ## Future work
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
 
-Additional work beyond the scope of this proposal depends on user input of course. Some ideas in mind that may be worked on: 
+Future work will include:
 
-- Map file names to lines of code in those files and what unit tests test each of those lines of code. With this we could pinpoint and leverage the line of code in each mutant. Some of the prerequisites for this may exist already in the `covrpage` package (<https://github.com/yonicd/covrpage>). 
-- Make mutant runs faster by only running unit tests that are impacted by the mutant itself. This could dramatically speed up runs. We’d need the prerequisite discussed in the above bullet first to make this possible.
-- The way R parses functions is not ideal. It discards comments, blank lines, etc. Which means that it’s difficult to retain the structure of the original file function(s) come from. Right now, we’re reading files, doing mutations, then writing completely new files - this in some cases won’t work because we lose meaningful pieces that R’s parsing does not retain. We can still implement mutant regardless, but better parsing of the language would help.
+- Adding support for additional data repositories
 
 
 ## Key risks
@@ -40,8 +40,10 @@ What sort of things could come up that can delay or break the project?
 
 -->
 
-As mentioned above, this project is rather complex, which could lead to the project taking longer than expected. However, there are parts of the project that can be reduced in scope to meet the timeline proposed. For example, we can implement a very minimal reporting setup so that basic information is present with looking sleek. In another example, there may be some operating systems the package may not work on when running R sessions in parallel; we can still move forward and solve those problems later. 
+One barrier for some data repositories will be that access may be limited to people at certain institutions, etc. These repositories are likely to be less widely used anyway, so we’ll probably not incorporate them.
 
-The smaller niche of mutant relative to other projects, testthat for example, may relegate it to low usage. I think we can drive usage up with thorough documentation, as well as many blog posts describing usage. 
+Some data repositories are likely to use unusual authentication schemes, but given how many remote data sources we’ve built R software for, we’re confident we can solve any authentication problems. 
 
-Last, to make sure the project lasts a long time, I’ll recruit co-maintainers as soon as possible and give them write access to the two repositories so they will know they’re part of the team. In fact, there is already one contributor to mutant (<https://github.com/sckott/mutant/graphs/contributors>) who I am confident will contribute if I am actively working on the project.
+To avoid potential users not knowing about this package we will get data repositories that the package integrates with to list our package in their documentation. 
+
+A software client for any remote API runs the risk of breaking because remote APIs can often change with little notice. We have a lot of experience with this issue. Two ways to minimize effects of changing APIs are to a) subscribe to any mailing lists, fora, etc. where API changes are announced, and b) make sure the package fails well, making it easy for maintainers to find problems as well for users to understand errors.

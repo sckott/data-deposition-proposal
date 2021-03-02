@@ -1,6 +1,6 @@
 # Project plan
 
-## Start-up phase
+<!-- ## Start-up phase -->
 <!--
 Covering the planning phase, this section should provide a relatively detailed plan of how work will start on the project. This section is important because projects need to get up and running quickly.
 
@@ -29,7 +29,7 @@ Eight weeks in total. 4 hours per day, 4 days per week (16 hrs/wk * 8 weeks = 12
 
 
 
-## Other aspects
+<!-- ## Other aspects -->
 <!--
 Covering non-technical activities like on-going publicity, paper preparation, discussion groups etc. that might be required to facilitate successful delivery of the project.
 

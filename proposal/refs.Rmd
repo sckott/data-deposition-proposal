@@ -1,3 +1,11 @@
 # References
 
-Abstract Syntax Trees in Python https://docs.python.org/3/library/ast.html 
+Christensen G, Dafoe A, Miguel E, Moore DA, Rose AK (2019) A study of the impact of data sharing on article citations using journal policies as a natural experiment. PLoS ONE 14(12): e0225883. <https://doi.org/10.1371/journal.pone.0225883>
+
+Fecher, B., Friesike, S., & Hebing, M. (2015). What Drives Academic Data Sharing? PLOS ONE, 10(2), e0118053. <https://doi.org/10.1371/journal.pone.0118053>
+
+Resnik, D. B., Morales, M., Landrum, R., Shi, M., Minnier, J., Vasilevsky, N. A., & Champieux, R. E. (2019). Effect of impact factor and discipline on journal data sharing policies. Accountability in Research, 26(3), 139–156. <https://doi.org/10.1080/08989621.2019.1591277>
+
+Stodden, V., Seiler, J., & Ma, Z. (2018). An empirical analysis of journal policy effectiveness for computational reproducibility. Proceedings of the National Academy of Sciences, 115(11), 2584–2589. <https://doi.org/10.1073/pnas.1708290115>
+
+Vines, T. H., Andrew, R. L., Bock, D. G., Franklin, M. T., Gilbert, K. J., Kane, N. C., … Yeaman, S. (2013). Mandated data archiving greatly improves access to research data. The FASEB Journal, 27(4), 1304–1308. <https://doi.org/10.1096/fj.12-218164>
