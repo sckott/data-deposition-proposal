@@ -20,12 +20,9 @@ Including target dates is really important as you need to be committed and the I
 
 Eight weeks in total. 4 hours per day, 4 days per week (16 hrs/wk * 8 weeks = 128 hrs)
 
-- Phase 1: Data repositories research and implement authentication 
-  - Weeks 1-2 (32 hrs)
-- Phase 2:  Implement methods for fetch, metadata/data preparation, and data upload
-  - Weeks 3-6 (64 hrs)
-- Phase 3: Documentation and user testing 
-  - Week 7-8 (16 hrs)
+- Phase 1 (Weeks 1-2 (32 hrs)): Data repositories research and implement authentication 
+- Phase 2 (Weeks 3-6 (64 hrs)): Implement methods for fetch, metadata/data preparation, and data upload
+- Phase 3 (Week 7-8 (32 hrs)): Documentation and user testing 
 
 
 

@@ -15,18 +15,16 @@ This project will be complete when a stable version of deposit is on CRAN and us
 How will we know when success is achieved, what markers can we use along the way 
 -->
 
-Success will be measured by interest gauged via GitHub (stars, forks, opened issues), and downloads from CRAN. Most importantly for the long-term success of the software, I’d like to attract one or more additional maintainers to make sure the project is more sustainable moving forward - and because complex projects are easier with more maintainers. There are many technical university librarians that have been involved in bug reports and writing tutorials for software I maintain for academic metadata sources. Thus, it’s likely these same people will be interested in the proposed software herein and perhaps aid in maintenance. 
+Success will be measured by interest gaged via GitHub (stars, forks, opened issues), and downloads from CRAN. Most importantly for the long-term success of the software, I’d like to attract one or more additional maintainers to make sure the project is more sustainable moving forward - and because complex projects are easier with more maintainers. There are many technical university librarians that have been involved in bug reports and writing tutorials for software I maintain for academic metadata sources. Thus, it’s likely these same people will be interested in the proposed software herein and perhaps aid in maintenance. 
 
 We can also measure success by what users do with the software. It is hard to measure how R users use R packages because there’s no way to track usage. However, we will include user agent strings uniquely identifying HTTP requests from our software; then we can ask data repositories to tell us how many requests they get from our user agent string. Citations will not likely work since it’s not likely that users would cite this kind of software in a paper. It is likely that this software could show up in training materials created by librarians at universities.
 
-## Future work
+<!-- ## Future work -->
 <!-- 
 How could this be extended / developed in the future by yourself and/or the community in general?
 -->
 
-Future work will include:
-
-- Adding support for additional data repositories
+<!-- Future work will include adding support for additional data repositories -->
 
 
 ## Key risks
@@ -40,10 +38,10 @@ What sort of things could come up that can delay or break the project?
 
 -->
 
-One barrier for some data repositories will be that access may be limited to people at certain institutions, etc. These repositories are likely to be less widely used anyway, so we’ll probably not incorporate them.
+<!-- One barrier for some data repositories will be that access may be limited to people at certain institutions, etc. These repositories are likely to be less widely used anyway, so we’ll probably not incorporate them.
 
 Some data repositories are likely to use unusual authentication schemes, but given how many remote data sources we’ve built R software for, we’re confident we can solve any authentication problems. 
 
-To avoid potential users not knowing about this package we will get data repositories that the package integrates with to list our package in their documentation. 
+To avoid potential users not knowing about this package we will get data repositories that the package integrates with to list our package in their documentation.  -->
 
 A software client for any remote API runs the risk of breaking because remote APIs can often change with little notice. We have a lot of experience with this issue. Two ways to minimize effects of changing APIs are to a) subscribe to any mailing lists, fora, etc. where API changes are announced, and b) make sure the package fails well, making it easy for maintainers to find problems as well for users to understand errors.

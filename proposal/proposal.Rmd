@@ -29,7 +29,7 @@ One of the first steps will be to complete research on data repositories using t
 
 My significant experience in working with web services will help make interactions with data repositories as smooth as possible. I created and maintain packages for major aspects of working with web services in R: crul, an HTTP client (similar to httr); webmockr, for mocking HTTP requests; and vcr, for caching HTTP requests in unit tests.
 
-Many of the pieces for interacting with repositories are already implemented by rOpenSci staff or community members. For example, Karthik Ram and I maintain the R package rdryad for interacting with Dryad, one of the larger general purpose data repositories, to which we’ve recently added the ability to upload datasets. Another major data repository is the Open Science Framework (OSF) - an rOpenSci community member Aaron Wolen maintains the package osfr for OSF (which also has data upload functionality). Using these existing packages as dependencies, I can more quickly build the plumbing for interacting with data repositories.
+Many of the pieces for interacting with repositories are already implemented by rOpenSci staff or community members. For example, Karthik Ram and I maintain the R package rdryad for interacting with Dryad, one of the larger general purpose data repositories, to which we’ve recently added the ability to upload datasets. Another major data repository is the Open Science Framework (OSF) - an rOpenSci community member Aaron Wolen maintains the package osfr for OSF (which also has data upload functionality). Using these existing packages as dependencies, I can more quickly build the plumbing for data repositories.
 
 The package structure will have the following components (see figure below): authenticate, prepare data and metadata, submit data, fetch data, and browse data. Authentication will entail abstracting a lot of complexity, making the process simple for the user. Next we’ll help users prepare their data and metadata. This step will vary based on the data repository; in some cases this will be the last step before the user has to submit data manually on a website; in other cases we can proceed to submitting data. Data submission will entail typically a POST HTTP request with metadata and data, returning the status of the submission attempt. After submitting data, I’ll encourage users to fetch their data to make sure that the data submission worked. Last, if the data repository has a landing page for the uploaded dataset within a short period, we can bring the user to that page to make sure everything is correct.
 
@@ -75,7 +75,7 @@ I anticipate using the following packages to support the proposed components:
 
 <!-- <img src="assets/img.png" width="300"> -->
 
-![Fig 1. (Icons from [FontAwesome](https://fontawesome.com/))](assets/img.png){#id .class width=375}
+![Icons from [FontAwesome](https://fontawesome.com/)](assets/img.png){#id .class width=240}
 
 It may make sense after some work is done to break off parts of the package into additional package(s). The R package devtools has shown us that placing too many disparate tasks in a single package can be better accomplished by separating them. 
 
@@ -84,7 +84,7 @@ It may make sense after some work is done to break off parts of the package into
 
 ### Start-up phase
 
-We’ll start with research on data repositories. This will entail using the Registry of Research Data Repositories, including communication with repository managers to clarify any details which are not clear or not documented. In addition, we’ll identify users of each repository to help us test the package. Details on data repository research:
+We’ll start with research on data repositories. This will entail using the Registry of Research Data Repositories, including communication with repository managers to clarify any details which are not clear. In addition, we’ll identify users of each repository to help us test the package. Details on data repository research:
 
 - Select two data repositories to focus on. Build out documentation on how to add additional data repositories so that most of the work of extending to new repositories is done by community members
 - Find the most common set of actions we can perform with data repositories
@@ -95,10 +95,7 @@ We’ll start with research on data repositories. This will entail using the Reg
 
 - Design plugin system to allow for anyone to extend the package for any additional data repositories
 - Design public API (user facing functions) with function names that convey meaning following the usethis package model.
-- Implement authentication following best practices for security, including support for (as needed):
-  - user/password
-  - API token
-  - OAuth
+- Implement authentication following best practices for security
 - Implement data fetch methods first - as this is easier than creating data and users will want it anyway - this will help us get familiar with each data repository
 - Implement metadata and data preparation methods
 - Implement data upload methods
@@ -109,6 +106,6 @@ We’ll start with research on data repositories. This will entail using the Reg
 
 - License will be MIT
 - Blog posts, ropensci community call, conf. talk, R Consortium blog post
-- Submission to CRAN
-- The code will be developed in the open in the rOpenSci GitHub organisation. Discussion of the  deposit project will happen in public issues of the repository. The license will be MIT.
-- We may submit to rOpenSci software review to further refine the package
+<!-- - Submission to CRAN -->
+- The code will be developed in the open in the rOpenSci GitHub organization. Discussion of the  deposit project will happen in public issues of the repository. The license will be MIT.
+<!-- - We may submit to rOpenSci software review to further refine the package -->

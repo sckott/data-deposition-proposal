@@ -24,4 +24,4 @@ There are some existing solutions for data deposition in R:
 - [rdryad](https://cloud.r-project.org/web/packages/rdryad/): Like DataOne, [Dryad](https://datadryad.org/stash) is a general data repository. Karthik Ram and I maintain this package. Data submission to Dryad is in development in this package.
 - [osfr](https://cloud.r-project.org/web/packages/osfr): Open Science Framework ([OSF](https://osf.io/)) is a project management platform that includes hosting research datasets. osfr is an rOpenSci package maintained by a community member.
 
-The above tools are built to interact with single data repositories. I know of no tools that work across data repositories.
+The above tools interact with single data repositories. I know of no tools that work across data repositories.

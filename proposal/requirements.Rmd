@@ -3,7 +3,7 @@
 An idea of what is required to make the project actually happen
 -->
 
-Programming time is the only requirement. All of the requested funds are for paying salaray of the one programmer.
+Programming time is the only requirement. All of the requested funds are for paying salary of the one programmer.
 
 ## People
 <!--
@@ -36,9 +36,6 @@ Are there tools or tech that don't exist that will be produced to facilitate the
 -->
 
 I request a total of $16,000 to support 2 months work for myself, all of which will be salary. 
-
-* Salary: $16,000
-* Total award: $16,000
 
 <!-- ## Summary -->
 <!--
